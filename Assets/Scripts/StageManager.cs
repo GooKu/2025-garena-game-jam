@@ -3,10 +3,12 @@ using UnityEngine.Playables;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using GModule;
+using UnityEngine.Timeline;
 
 public class StageManager : MonoBehaviour
 {
     [SerializeField] private PlayableDirector director;
+    [SerializeField] private TimelineAsset startTimeline;
     [SerializeField] private GameObject targetObject;
     [SerializeField] private GameObject optionGroup;
     [SerializeField] private string nextScene;
@@ -19,6 +21,7 @@ public class StageManager : MonoBehaviour
         {
             at.ActionEvent += actionHandle;
         }
+        director.Play(startTimeline);
     }
 
     private void actionHandle(ActionToken actionToken)

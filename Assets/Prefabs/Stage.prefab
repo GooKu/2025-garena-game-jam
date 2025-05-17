@@ -461,6 +461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   director: {fileID: 9097898054155216552}
+  startTimeline: {fileID: 0}
   targetObject: {fileID: 5397598436198445813}
   optionGroup: {fileID: 9044639269333615080}
   nextScene: 
@@ -694,7 +695,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: eeeef94c0026f754dba34438fbb8e27f, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
