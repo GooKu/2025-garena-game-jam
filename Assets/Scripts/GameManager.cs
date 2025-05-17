@@ -18,10 +18,11 @@ public class GameManager : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
+        MessageEventSystem.Register(EventKey.NewGame, newGameHandle);
         MessageEventSystem.Register(EventKey.UpdateScore, updateScoreHandle);
     }
 
-    private void newGame(string arg1, object[] arg2)
+    private void newGameHandle(string arg1, object[] arg2)
     {
         score = 0;
         SceneManager.LoadScene("Stage01");
