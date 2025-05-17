@@ -688,10 +688,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 220
       objectReference: {fileID: 0}
-    - target: {fileID: 4390388900429044383, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 82c27ff5393708a4087e842c50432ec0, type: 2}
     - target: {fileID: 5528927861035938317, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
       propertyPath: nextScene
       value: Stage02

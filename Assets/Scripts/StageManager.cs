@@ -10,6 +10,9 @@ public class StageManager : MonoBehaviour
 {
     [SerializeField] private PlayableDirector director;
     [SerializeField] private TimelineAsset startTimeline;
+    [SerializeField] private PlayableDirector transitionInDirector;
+    [SerializeField] private TimelineAsset transitionIn;
+    [SerializeField] private TimelineAsset transitionOut;
     [SerializeField] private GameObject targetObject;
     [SerializeField] private GameObject optionGroup;
     [SerializeField] private CountDownUI countDownUI;
@@ -19,7 +22,7 @@ public class StageManager : MonoBehaviour
 
     private float time;
 
-    void Start()
+    IEnumerator Start()
     {
         targetObject.gameObject.SetActive(false);
         optionGroup.gameObject.SetActive(false);
@@ -27,8 +30,10 @@ public class StageManager : MonoBehaviour
         {
             at.ActionEvent += actionHandle;
         }
-        director.Play(startTimeline);
         countDownUI.Show(1);
+        transitionInDirector.Play(transitionOut);
+        yield return new WaitForSeconds(1);
+        director.Play(startTimeline);
     }
     //trigger by signal
     public void StartGame()
@@ -64,12 +69,27 @@ public class StageManager : MonoBehaviour
 
     public void NextScene()
     {
+        StartCoroutine(_nextScene());
+    }
+    private IEnumerator _nextScene()
+    {
+        transitionInDirector.Play(transitionIn);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(nextScene);
     }
 
     public void ToEnding()
     {
         StopAllCoroutines();
+        StartCoroutine(_toEnding());
+    }
+
+    private IEnumerator _toEnding()
+    {
+        transitionInDirector.Play(transitionIn);
+        yield return new WaitForSeconds(1);
+        transitionInDirector.Play(transitionOut);
         MessageEventSystem.Notify(EventKey.Ending);
     }
+
 }
