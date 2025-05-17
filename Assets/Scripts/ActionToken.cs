@@ -9,8 +9,10 @@ public class ActionToken : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 {
     public event Action<ActionToken> ActionEvent;
 
+    [SerializeField] private int score;
     [SerializeField] private Canvas canvas;
     [SerializeField] private TimelineAsset result;
+    public int Score => score;
     public TimelineAsset Result => result;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
