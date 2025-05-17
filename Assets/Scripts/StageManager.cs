@@ -66,4 +66,9 @@ public class StageManager : MonoBehaviour
     {
         SceneManager.LoadScene(nextScene);
     }
+
+    public void ToEnding()
+    {
+        MessageEventSystem.Notify(EventKey.ToEnding);
+    }
 }

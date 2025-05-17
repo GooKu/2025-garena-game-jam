@@ -372,6 +372,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stage
       objectReference: {fileID: 0}
+    - target: {fileID: 555633256800139541, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -16
+      objectReference: {fileID: 0}
+    - target: {fileID: 555633256800139541, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3016112271242192751, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3016112271242192751, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -418790494836003914, guid: 727f982964eca484791bb0a038083339, type: 3}
     - target: {fileID: 3697849902141708108, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
@@ -423,10 +439,10 @@ PrefabInstance:
     - target: {fileID: 9097898054155216552, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
       propertyPath: m_PlayableAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 8e7b1ffe4c9e6ef4aa37c7b5efdb4bf0, type: 2}
+      objectReference: {fileID: 11400000, guid: 94fe528b85d16a14c8da4996f4e1c7f7, type: 2}
     - target: {fileID: 9097898054155216552, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
       propertyPath: m_SceneBindings.Array.size
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 9097898054155216552, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
       propertyPath: m_SceneBindings.Array.data[6].key
@@ -489,6 +505,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -9115535764329334781, guid: 94fe528b85d16a14c8da4996f4e1c7f7, type: 2}
     - target: {fileID: 9097898054155216552, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
+      propertyPath: m_SceneBindings.Array.data[21].key
+      value: 
+      objectReference: {fileID: -1922042954226574604, guid: 94fe528b85d16a14c8da4996f4e1c7f7, type: 2}
+    - target: {fileID: 9097898054155216552, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
       propertyPath: m_SceneBindings.Array.data[6].value
       value: 
       objectReference: {fileID: 6272240699961709137}
@@ -548,6 +568,10 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[20].value
       value: 
       objectReference: {fileID: 6272240699961709137}
+    - target: {fileID: 9097898054155216552, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
+      propertyPath: m_SceneBindings.Array.data[21].value
+      value: 
+      objectReference: {fileID: 6272240699961709138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
