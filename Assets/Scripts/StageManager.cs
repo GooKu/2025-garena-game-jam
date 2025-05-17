@@ -1,22 +1,21 @@
 using UnityEngine;
 using UnityEngine.Playables;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class StageManager : MonoBehaviour
 {
     [SerializeField] private PlayableDirector director;
     [SerializeField] private GameObject targetObject;
-    [SerializeField] private List<GameObject> optionGroup;
+    [SerializeField] private GameObject optionGroup;
+    [SerializeField] private string nextScene;
 
     private int score;
 
     void Start()
     {
         targetObject.gameObject.SetActive(false);
-        for (int i = 0; i < optionGroup.Count; i++)
-        {
-            optionGroup[i].SetActive(false);
-        }
+        optionGroup.gameObject.SetActive(false);
         foreach (var at in GameObject.FindObjectsByType<ActionToken>(FindObjectsInactive.Include, FindObjectsSortMode.None))
         {
             at.ActionEvent += actionHandle;
@@ -32,9 +31,11 @@ public class GameManager : MonoBehaviour
     public void ShowOptions(int index)
     {
         targetObject.gameObject.SetActive(true);
-        for (int i = 0; i < optionGroup.Count; i++)
-        {
-            optionGroup[i].SetActive(i == index);
-        }
+        optionGroup.SetActive(true);
+    }
+
+    public void NextScene()
+    {
+        SceneManager.LoadScene(nextScene);
     }
 }
