@@ -5,7 +5,7 @@ using UnityEngine.Timeline;
 using System;
 
 [RequireComponent(typeof(RectTransform))]
-public class ActionToken : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class ActionToken : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     public event Action<ActionToken> ActionEvent;
 
@@ -29,11 +29,6 @@ public class ActionToken : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         {
             canvasGroup = gameObject.AddComponent<CanvasGroup>();
         }
-    }
-
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        //TODO
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -66,6 +61,11 @@ public class ActionToken : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         targetObject.EnableOutline(false);
         ActionEvent?.Invoke(this);
         Destroy(gameObject);
+    }
+
+    public void TriggerAction()
+    {
+        ActionEvent?.Invoke(this);
     }
 
     private bool IsOverlapping(RectTransform targetRect)
