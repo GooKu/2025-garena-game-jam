@@ -1,11 +1,17 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.Timeline;
+using System;
 
 [RequireComponent(typeof(RectTransform))]
 public class ActionToken : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public event Action<ActionToken> ActionEvent;
+
     [SerializeField] private Canvas canvas;
+    [SerializeField] private TimelineAsset result;
+    public TimelineAsset Result => result;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
@@ -56,6 +62,7 @@ public class ActionToken : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             return;
         }
         targetObject.EnableOutline(false);
+        ActionEvent?.Invoke(this);
         Destroy(gameObject);
     }
 
