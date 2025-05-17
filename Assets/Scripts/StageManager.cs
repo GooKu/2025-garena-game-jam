@@ -69,6 +69,7 @@ public class StageManager : MonoBehaviour
 
     public void ToEnding()
     {
-        MessageEventSystem.Notify(EventKey.ToEnding);
+        StopAllCoroutines();
+        MessageEventSystem.Notify(EventKey.Ending);
     }
 }

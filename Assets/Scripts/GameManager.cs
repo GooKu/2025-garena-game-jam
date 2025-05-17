@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         MessageEventSystem.Register(EventKey.NewGame, newGameHandle);
         MessageEventSystem.Register(EventKey.UpdateScore, updateScoreHandle);
+        MessageEventSystem.Register(EventKey.Ending, endingHandle);
     }
 
     private void newGameHandle(string arg1, object[] arg2)
@@ -32,5 +33,11 @@ public class GameManager : MonoBehaviour
     {
         int deltaScore = (int)arg2[0];
         score += deltaScore;
+    }
+
+    private void endingHandle(string arg1, object[] arg2)
+    {
+        bool isEnding1 = score > 0;
+        MessageEventSystem.Notify(EventKey.ShowEnding, isEnding1);
     }
 }
