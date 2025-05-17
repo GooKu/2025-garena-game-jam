@@ -9,11 +9,13 @@ public class ActionToken : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
+    private Vector2 orgPos;
     private TargetObject targetObject;
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
+        orgPos = rectTransform.anchoredPosition;
         canvasGroup = GetComponent<CanvasGroup>();
         if (canvasGroup == null)
         {
@@ -50,11 +52,11 @@ public class ActionToken : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         if(targetObject == null) 
         {
-            //TODO: ¼u¦^
+            rectTransform.anchoredPosition = orgPos;
             return;
         }
         targetObject.EnableOutline(false);
-        //TODO:trugger anim
+        Destroy(gameObject);
     }
 
     private bool IsOverlapping(RectTransform targetRect)
