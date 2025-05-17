@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 175081596248635049}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 984.5772, y: 447.58112, z: -3.7623713}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -750,6 +750,7 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: fc918bdcc34c67d40ba63a8e796cd39d, type: 2}
+    - {fileID: 11400000, guid: d9d17bdf767694b47866954e925b5ff8, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -757,6 +758,20 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
           m_MethodName: ShowOptions
           m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5528927861035938317}
+          m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
+          m_MethodName: NextScene
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -835,11 +850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2038136184275030827, guid: 2b5d71932e7d5ee4dbe210b0b55a2c14, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 2038136184275030827, guid: 2b5d71932e7d5ee4dbe210b0b55a2c14, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2038136184275030827, guid: 2b5d71932e7d5ee4dbe210b0b55a2c14, type: 3}
       propertyPath: m_LocalPosition.x
