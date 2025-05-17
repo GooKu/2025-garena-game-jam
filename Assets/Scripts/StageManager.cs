@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Playables;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using GModule;
 
 public class StageManager : MonoBehaviour
 {
@@ -9,8 +10,6 @@ public class StageManager : MonoBehaviour
     [SerializeField] private GameObject targetObject;
     [SerializeField] private GameObject optionGroup;
     [SerializeField] private string nextScene;
-
-    private int score;
 
     void Start()
     {
@@ -25,7 +24,7 @@ public class StageManager : MonoBehaviour
     private void actionHandle(ActionToken actionToken)
     {
         director.Play(actionToken.Result);
-        score += actionToken.Score;
+        MessageEventSystem.Notify(EventKey.UpdateScore, actionToken.Score);
     }
 
     public void ShowOptions(int index)
