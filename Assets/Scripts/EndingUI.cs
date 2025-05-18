@@ -11,6 +11,11 @@ public class EndingUI : MonoBehaviour
         MessageEventSystem.Register(EventKey.ShowEnding, showEndingHandle);
     }
 
+    private void OnDestroy()
+    {
+        MessageEventSystem.Deregister(EventKey.ShowEnding, showEndingHandle);
+    }
+
     private void showEndingHandle(string arg1, object[] arg2)
     {
         bool isEnding1 = (bool)arg2[0];
