@@ -59,13 +59,13 @@ public class ActionToken : MonoBehaviour, IDragHandler, IEndDragHandler
             return;
         }
         targetObject.EnableOutline(false);
-        ActionEvent?.Invoke(this);
-        Destroy(gameObject);
+        TriggerAction();
     }
 
     public void TriggerAction()
     {
         ActionEvent?.Invoke(this);
+        Destroy(gameObject);
     }
 
     private bool IsOverlapping(RectTransform targetRect)
