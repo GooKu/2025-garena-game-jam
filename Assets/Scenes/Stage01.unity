@@ -690,7 +690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5528927861035938317, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
       propertyPath: nextScene
-      value: Stage04
+      value: Stage02
       objectReference: {fileID: 0}
     - target: {fileID: 5528927861035938317, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
       propertyPath: startTimeline

@@ -1280,10 +1280,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1609824159703767722, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -33.951
-      objectReference: {fileID: 0}
     - target: {fileID: 3016112271242192751, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
       propertyPath: m_Type
       value: 1
@@ -1352,6 +1348,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 693553fd24a7ed049a56f82eec3df855, type: 2}
+    - target: {fileID: 5528927861035938317, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
+      propertyPath: nextScene
+      value: Stage04
+      objectReference: {fileID: 0}
     - target: {fileID: 5528927861035938317, guid: 4470c90fa21a74942aac7ac28c1eba31, type: 3}
       propertyPath: startTimeline
       value: 
