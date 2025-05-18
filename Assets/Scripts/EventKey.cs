@@ -1,5 +1,7 @@
 public static class EventKey
 {
+    public const string EntryMenu = "EntryMenu";
+    public const string StartOpeningNarrative = "StartOpeningNarrative";
     public const string NewGame = "NewGame";
     /// <summary> p0:int => delta score </summary>
     public const string UpdateScore = "UpdateScore";
